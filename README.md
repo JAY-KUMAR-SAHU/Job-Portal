@@ -1,9 +1,4 @@
 JOB PORTAL WEBSITE
-MADE BY :-
-Name    	: 	JAY KUMAR SAHU
-Email   	: 	jay20_ug@cse.nits.ac.in
-Phone   	: 	7972974765
-
 
 Folder : InternJob
 
