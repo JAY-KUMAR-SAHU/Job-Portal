@@ -32,20 +32,22 @@
 <style>
         body{
             background-image: url('./Contact_Background.jpg');
-            background-size:cover;
+            background-size: calc(100% - 200px) calc(100% - 52px);
+            background-position: 200px 112px;
             background-repeat: no-repeat;
         }
         form{
             background: white;
-            margin-top: 8%;
-            margin-left: 57.5%;
+            margin-top: 3%;
+            margin-left: 70%;
             padding: 20px;
             box-shadow: 10px 10px 8px 10px #888888;
+            width: 400px;
         }
     </style>
 
 <div class="container">
-    <form action="./contact.php" method="POST" style="margin-left:60%; margin-top:20px; width:400px">
+    <form action="./contact.php" method="POST">
         <h3>** CONTACT US **</h3>
         <small>We will definitely look into your query.</small> <br><br>
         <div class="mb-3">

@@ -1,7 +1,7 @@
 <?php include 'header.php' ?>
 
     <div class="content">
-        <table class="table">
+        <table class="table" style="text-align:center;">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -19,8 +19,9 @@
                 if($result->num_rows>0){
                     while($rows=$result->fetch_assoc()){
                         echo'<tr>
-                             <th scope="row">'.++$i.'</th>
-                             <td>'.$rows['Name'].'</td>
+                             <th scope="row">'.++$i.'</th>';
+                            //  <td>'.$rows['Name'].'</td>
+                        echo'<td>****</td>
                              <td>'.$rows['Applied_for'].'</td>
                              <td>'.$rows['year_passout'].'</td>
                              </tr>';

@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <style>
         body{
-            background-image: url('./Background\ Image.jpg');
+            background-image: url('./Background_Image.jpg');
             background-size:cover;
             background-repeat: no-repeat;
         }

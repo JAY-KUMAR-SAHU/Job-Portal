@@ -1,15 +1,15 @@
 <?php include 'header.php' ?>
 <?php 
-    // if($_SERVER["REQUEST_METHOD"] == "POST"){
-      if(isset($_POST['applycompany'])){
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+      // $conn = mysqli_connect($servername, $username, $Password, $database);
       include '_dbconnect.php' ;
       $cname = $_POST["cname"];
       $pos = $_POST["pos"];
       $Jdesc = $_POST["Jdesc"];
       $CTC = $_POST["CTC"];
       $skills = $_POST["skills"];
-      
-      $sql = "INSERT INTO `jobs` (`cname`, `position`, `Jdesc`, `CTC`, `skills`) VALUES ('$cname', '$pos', '$Jdesc',  '$CTC', '$skills');"  ;
+       
+      $sql = "INSERT INTO `jobs` (`cname`, `position`, `Jdesc`, `CTC`, `skills`, `sno`) VALUES ('$cname', '$pos', '$Jdesc',  '$CTC', '$skills', '');"  ;
       $result=mysqli_query($conn, $sql);
 
       if($result){
@@ -72,7 +72,7 @@
                 <input type="text" class="form-control" id="CTC" name="CTC">
               </div> <br>
               <!-- <button type="submit" class="btn btn-primary" name="job">Submit</button> -->
-              <input type="submit" class="btn btn-primary" value="Submit" name="applycompany">
+              <input type="submit" class="btn btn-primary" value="Submit">
             </form>
         </div>
       </div>
@@ -125,7 +125,7 @@
                         <p style="color:black;"><b>Skills Required : </b>'.$rows['skills'].'</p>
                         <p style="color:black;"><b>CTC : </b>INR '.$rows['CTC'].'</p>
                         <button type="button" class="btn btn-primary">
-                        <a href="career.php" style="text-decoration:none; color:white;">Apply Now</a></button>
+                        <a href="Candidate_apply_form.php" style="text-decoration:none; color:white;">Apply Now</a></button>
                     </div>
                 </div>
                 <br>';

@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if($password == $cpassword && $exists == false && ($number > 1000000000 && $number < 10000000000)){
         $hash = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO `users` (`Name`, `email`, `password`, `phone_no`, `date+time`, `profilephoto`) VALUES ('$username', '$email', '$hash', '$number', CURRENT_TIMESTAMP, '0');";
+        $sql = "INSERT INTO `users` (`Name`, `email`, `password`, `phone_no`, `date+time`) VALUES ('$username', '$email', '$hash', '$number', CURRENT_TIMESTAMP);";
         $result = mysqli_query($conn, $sql);
         if ($result){
             $showAlert = true;
@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <style>
         body{
-            background-image: url('./Background\ Image.jpg');
+            background-image: url('./Background_Image.jpg');
             background-size:cover;
             background-repeat: no-repeat;
         }
